@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leilighet utforskning</title>
+</head>
+
+
+<body>
+    <div id="utenfor">Du står utenfor en leilighet</div>
+    <button id="knapp1" onclick="GåInn()">Gå inn?</button>
+    <button id="knapp2" onclick="GåSoverom()"></button>
+    <button id="knapp3" onclick="GåStue()"></button>
+    <button id="knapp4" onclick="GåKjøkken()"></button>
+    <button id="knapp5" onclick="GåUt()"></button>
+
+    <script>
+        function GåInn(){
+            document.getElementById('utenfor').innerHTML='Du står i gangen';
+            document.getElementById('knapp1').innerHTML='';
+            document.getElementById('knapp2').innerHTML='Gå inn i soverommet?';
+            document.getElementById('knapp3').innerHTML='Gå inn i stua?';
+            document.getElementById('knapp4').innerHTML='Gå inn på kjøkkenet?';
+            document.getElementById('knapp5').innerHTML='Gå ut?';
+        }
+        function GåSoverom(){
+            document.getElementById('utenfor').innerHTML='Du står i soverommet';
+            document.getElementById('knapp1').innerHTML='Gå inn i gangen?';
+            document.getElementById('knapp2').innerHTML='';
+            document.getElementById('knapp3').innerHTML='';
+            document.getElementById('knapp4').innerHTML='';
+            document.getElementById('knapp5').innerHTML='';
+        }
+        function GåStue(){
+            document.getElementById('utenfor').innerHTML='Du står i stua';
+            document.getElementById('knapp1').innerHTML='Gå inn i gangen?';
+            document.getElementById('knapp2').innerHTML='';
+            document.getElementById('knapp3').innerHTML='';
+            document.getElementById('knapp4').innerHTML='Gå inn på kjøkkenet?';
+            document.getElementById('knapp5').innerHTML='';
+        }
+        function GåKjøkken(){
+            document.getElementById('utenfor').innerHTML='Du står på kjøkkenet';
+            document.getElementById('knapp1').innerHTML='Gå inn i gangen?';
+            document.getElementById('knapp2').innerHTML='';
+            document.getElementById('knapp3').innerHTML='Gå inn i stua?';
+            document.getElementById('knapp4').innerHTML='';
+            document.getElementById('knapp5').innerHTML='';
+        }
+        function GåUt(){
+            document.getElementById('utenfor').innerHTML='Du står utenfor en leilighet';
+            document.getElementById('knapp1').innerHTML='Gå inn i gangen?';
+            document.getElementById('knapp2').innerHTML='';
+            document.getElementById('knapp3').innerHTML='';
+            document.getElementById('knapp4').innerHTML='';
+            document.getElementById('knapp5').innerHTML='';
+        }
+    </script>
+
+</body>
+
+</html>

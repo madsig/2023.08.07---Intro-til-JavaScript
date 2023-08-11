@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leilighet utforskning</title>
+
+    <style>
+        div.buttons{
+            display: flex;
+            flex-direction: column;
+            width: 23%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <h2>Du står utenfor en leilighet</h2>
+        <div class="buttons">
+            <button onclick="Hall()">Gå inn?</button>
+        </div>
+    </div>
+
+    <script>
+        function Outside(){
+            document.getElementById('app').innerHTML=/*HTML*/`
+            <h2>Du står utenfor en leilighet</h2>
+            <div class="buttons">
+                <button onclick="Hall()">Gå inn?</button>
+            </div>`
+        }
+        function Hall(){
+            document.getElementById('app').innerHTML=/*HTML*/`
+            <h2>Du står i gangen</h2>
+            <div class="buttons">
+                <button onclick="Outside()">Gå ut?</button>
+                <button onclick="Kitchen()">Gå inn på kjøkkenet?</button>
+                <button onclick="Livingroom()">Gå inn i stua?</button>
+                <button onclick="Bedroom()">Gå inn på soverommet?</button>
+            </div>`
+        }
+        function Kitchen(){
+            document.getElementById('app').innerHTML=/*HTML*/`
+            <h2>Du står på kjøkkenet</h2>
+            <div class="buttons">
+                <button onclick="Hall()">Gå inn i gangen?</button>
+                <button onclick="Livingroom()">Gå inn i stua?</button>
+            </div>`
+        }
+        function Livingroom(){
+            document.getElementById('app').innerHTML=/*HTML*/`
+            <h2>Du står i stua</h2>
+            <div class="buttons">
+                <button onclick="Hall()">Gå inn i gangen?</button>
+                <button onclick="Kitchen()">Gå inn på kjøkkenet?</button>
+            </div>`
+        }
+        function Bedroom(){
+            document.getElementById('app').innerHTML=/*HTML*/`
+            <h2>Du står på soverommet</h2>
+            <div class="buttons">
+                <button onclick="Hall()">Gå inn i gangen?</button>
+            </div>`
+        }
+    </script>
+</body>
+
+</html>
